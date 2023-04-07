@@ -60,11 +60,11 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: #7f7b4a;
+    color: #837c2c;
 }
 #about{
     padding: 80px 0;
-    color:#7f7b4a;
+    color:#fff;
 }
 .row{
     display: flex;
@@ -85,5 +85,5 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #837c2c;
 }
