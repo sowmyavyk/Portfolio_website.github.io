@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width",inital-scale=1.0>
         <title>My Portfolio @VYAKARANAM SOWMYA</title>
         <LINK REL="stylesheet" href="page1CSS.css">
+        <script src="https://kit.fontawesome.com/20b034bc21.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="header">
@@ -15,6 +16,7 @@
                     <ul>
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICES</a></li>
                         <li><a href="#">PORTFOLIO</a></li>
                         <li><a href="#">CONTACT</a></li>
                     </ul>
@@ -36,18 +38,19 @@
                     </div>
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
-                        <P>
+                        <br><P>
                             Hi,Iam Vyakaranam Sowmya, an undergrad from Artificial intelligence and Data Science branch.<br>
                             Iam currently working on python programming.<br>
                             Iam an aspiring Data Scientist which stimulates myself to learn something new in data science feild.<br>
                             My learning in python is not only confined to data science but also to web development.<br>
                         </P>
                         <div class="tab-titles">
-                            <p class="tab-links active-link">Skills</p>
-                            <p class="tab-links">Education</p>
-                            <p class="tab-links">Volunteering</p>
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                            <p class="tab-links" onclick="opentab('Volunteering')">Volunteering</p>
                         </div>
-                        <div class="tab-contents">
+                        <br>
+                        <div class="tab-contents active-tab" id="Skills">
                             <ul>
 
                                 <li><span><b>Frontend Languages</b></span><br>HTML,CSS,JavaScript.<br>I did this portfolio using html,css,JS.</li>
@@ -55,14 +58,14 @@
                                 <li><span><b>Programming Languages</b></span><br>Python,C.<br>Build projects on python programming.</li>
                             </ul>
                         </div>
-                        <div class="tab-contents">
+                        <div class="tab-contents" id="Education">
                             <ul>
                                 <li><span><b>Secondary School</b></span><br>Sri Chaitanya School,Visakhapatnam,Andhra Pradesh</li>
                                 <li><span><b>Higher Secondary Education</span></b></span><br>Sri Viswa junior college,Visakhapatnam,Andhra Pradesh</li>
                                 <li><span><b>Btech,Computer Science</b></span><br>Vignan Institute of Iinformation Technology,Visakhapatnam,Andhra Pradesh</li>
                             </ul>
                         </div>
-                        <div class="tab-contents">
+                        <div class="tab-contents" id="Volunteering">
                             <ul>
                                 <li><span><b>JOINT SECRETARY</b></span><br><b>Vignan's Student Activity Council</b><br>I'm Joint Secretary of Student Activity Council of Vignan Institute of Information Technology 
                                     representing branch AI&DS (Artificial Intelligence And Data Science).Being a student event organiser my work is to organize events  and conduct activities.</li>
@@ -73,5 +76,91 @@
                 </div>
             </div>
         </div>
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code" style="color: #152238;"></i>
+                        <h2>Web Design</h2>
+                        <p>I created this portfolio using html,css,JavaScript<br>
+                           Section used in this are:<br>
+                           Home<br>
+                           About<br>
+                           SERVICES<br>
+                           PORTFOLIO<br>
+                           CONTACT                          
+                        </p>
+                        <a href="#">Learn more</a>
+
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-python" style="color: #152238;"></i>
+                        <h2>Python</h2>
+                        <p>Done basics projects on python<br>
+                            Check out my github profile!!                      
+                        </p>
+                        <a href="#">Learn more</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+<!-- ----------------------------------portfolio-------------------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1><br>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/home_automation.jpg">
+                <div class="layer">
+                    <h3>Home Automation</h3>
+                    <p>
+
+                    </p>
+                    <a href="#"><i class="fas fa-external-link-alt" style="color:#fff;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work1.jpeg">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>
+                        my social media accounts
+                    </p>
+                    <a href="#"><i class="fas fa-external-link-alt" style="color:#fff;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.png">
+                <div class="layer">
+                    <h3>Online Shopping app</h3>
+                    <p>
+                        my social media accounts
+                    </p>
+                    <a href="#"><i class="fas fa-external-link-alt" style="color:#fff;"></i></a>
+                </div>
+            </div>
+
+        </div>   
+    </div>
+</div>
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
     </body>
 </html>
