@@ -13,20 +13,20 @@
             <div class="container">
                 <nav>
                     <img src="images/Sowmya logo.png" class="logo">
-                    <ul>
+                    <ul id="sidemenu">
                         <li><a href="#header">HOME</a></li>
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#services">SERVICES</a></li>
                         <li><a href="#portfolio">PORTFOLIO</a></li>
                         <li><a href="#contact">CONTACT</a></li>
-                        <!--<i class="fa-solid fa-circle-xmark" style="color: #ffffff;"></i>-->
+                        <i class="fas fa-times" onclick="closemenu()" style="color: #ffffff;"></i>
                     </ul>
-                    <!--<i class="fa-solid fa-bars" style="color: #ffffff;"></i>-->
+                    <i class="fas fa-bars" onclick="openmenu()" style="color: #ffffff;"></i>
                 </nav>
                 <div class="header-text">
-                    <p>Python Programmer</p>
+                    <!--<p>Python Programmer</p>-->
                     <h1>
-                        Hi,I'm<span>Sowmya</span><br> from India
+                        Hi,This is <span>Sowmya</span><br> from India
                     </h1>
                 </div>
 
@@ -41,7 +41,7 @@
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
                         <br><P>
-                            Hi,Iam Vyakaranam Sowmya, an undergrad from Artificial intelligence and Data Science branch.<br>
+                            Hi,Iam Vyakaranam Sowmya, a undergrad from Artificial intelligence and Data Science branch.<br>
                             Iam currently working on python programming.<br>
                             Iam an aspiring Data Scientist which stimulates myself to learn something new in data science feild.<br>
                             My learning in python is not only confined to data science but also to web development.<br>
@@ -62,9 +62,9 @@
                         </div>
                         <div class="tab-contents" id="Education">
                             <ul>
-                                <li><span><b>Secondary School</b></span><br>Sri Chaitanya School,Visakhapatnam,Andhra Pradesh</li>
-                                <li><span><b>Higher Secondary Education</span></b></span><br>Sri Viswa junior college,Visakhapatnam,Andhra Pradesh</li>
-                                <li><span><b>Btech,Computer Science</b></span><br>Vignan Institute of Iinformation Technology,Visakhapatnam,Andhra Pradesh</li>
+                                <li><span><b>Btech,Computer Science</b></span><br><b>2021-2025</b><br>Vignan Institute of Information Technology,Visakhapatnam,Andhra Pradesh</b></li>
+                                <li><span><b>Higher Secondary Education</span></b></span><br><b>2019-2021</b><br>Sri Viswa junior college,Visakhapatnam,Andhra Pradesh</li>
+                                <li><span><b>Secondary School</b></span><br><b>2015-2019</b><br>Sri Chaitanya School,Visakhapatnam,Andhra Pradesh</li>
                             </ul>
                         </div>
                         <div class="tab-contents" id="Volunteering">
@@ -140,7 +140,7 @@
         <a href="#" class="btn">See more</a>
     </div>
 </div>
-<!-- contact-->
+<!-- --------------------------contact--------------------------------->
 <div id="contact">
     <div class="container">
         <div class="row">
@@ -149,9 +149,9 @@
                 <p><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i>vyakaranamsowmya8@gmail.com</p>
                 <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i>0123456789</p><br>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/sowmya-vyakaranam/"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
-                    <a href="https://twitter.com/sowmya_vyk?t=INhc01YzXcVyrz5--XfqaQ&s=08"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
-                    <a href="https://github.com/sowmyavyk"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+                    <p><a href="https://www.linkedin.com/in/sowmya-vyakaranam/"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>Linkedin</a></p>
+                    <p><a href="https://twitter.com/sowmya_vyk?t=INhc01YzXcVyrz5--XfqaQ&s=08"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i>Twitter</a></p>
+                    <p><a href="https://github.com/sowmyavyk"><i class="fa-brands fa-github" style="color: #ffffff;"></i>Github</a></p>
                 </div>
                 <a href="images/" download class="btn btn2">Download CV</a>
             </div>
@@ -183,6 +183,15 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
     }
 </script>
 <script>
