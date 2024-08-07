@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #FFFFFF;
+    background-color: #1e1e1e;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    background-color: #2b2b2b;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.sidebar .logo {
+    font-size: 60px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.sidebar .bracket {
+    color: #875fdf;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.sidebar p {
+    text-align: center;
+    color: #875fdf;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #3b3b3b;
+}
+
+.main-content {
+    margin-left: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#task_bar, #events_tracker {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#task_bar h3, #events_tracker h3 {
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+#task_bar p, #events_tracker p {
+    color: #875fdf;
+}
+
+.tasks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list {
+    width: 30%;
+}
+
+.task-list h4 {
+    color: #FFFFFF;
+    background-color: #3b3b3b;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list ul li {
+    background-color: #3b3b3b;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.calendar {
+    background-color: #3b3b3b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.month ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+    color: #875fdf;
+}
+
+.weekdays {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    color: #FFFFFF;
+}
+
+.days {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.days li {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 5px 0;
+    background-color: #3b3b3b;
+    border-radius: 4px;
+}

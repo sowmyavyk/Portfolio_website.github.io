@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #1c1c1c;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1c1c1c;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    background-color: #00ff00;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.stats span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hero-image {
+    position: relative;
+    margin-top: 50px;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.overlay-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+
+.icon.angular {
+    background-image: url('path/to/angular-icon.png');
+}
+
+.icon.python {
+    background-image: url('path/to/python-icon.png');
+}
+
+.icon.nodejs {
+    background-image: url('path/to/nodejs-icon.png');
+}
+
+#about {
+    background-color: #2c2c2c;
+    padding: 50px 0;
+}
+
+#about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#services {
+    background-color: #1c1c1c;
+    padding: 50px 0;
+}
+
+.service-card {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #1c1c1c;
+    padding: 20px 0;
+    text-align: center;
+}
