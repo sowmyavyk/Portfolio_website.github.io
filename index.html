@@ -1,217 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF_8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width",inital-scale=1.0>
-        <title>My Portfolio @VYAKARANAM SOWMYA</title>
-        <LINK REL="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/20b034bc21.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio @Vyakaranam Sowmya</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/20b034bc21.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+    });
+</script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>HI! WELCOME TO SOWMYA'S WORLD!!</h2>
+        <nav>
+            <ul>
+                <li><a href="#header"><i class="fas fa-home"></i> HOME</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> ABOUT</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i> EXPERIENCE</a></li>
+                <li><a href="#timeline"><i class="fas fa-cog"></i> PROJECTS</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
         <div id="header">
             <div class="container">
-                <nav>
-                    <img src="images/Sowmya logo.png" class="logo">
-                    <ul id="sidemenu">
-                        <li><a href="#header">HOME</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#services">SERVICES</a></li>
-                        <li><a href="#portfolio">PORTFOLIO</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                        <i class="fas fa-times" onclick="closemenu()" style="color: #ffffff;"></i>
-                    </ul>
-                    <i class="fas fa-bars" onclick="openmenu()" style="color: #ffffff;"></i>
-                </nav>
                 <div class="header-text">
-                    <!--<p>Python Programmer</p>-->
-                    <h1>
-                        Hi,This is <span>Sowmya</span><br> from India
-                    </h1>
+                    <h1>WELCOME TO SOWMYA'S WORLD!</h1>
+                    <p>I AM A <span class="animated-text">DATA AVID</span></p>
+                    <p>I'm a data enthusiast with a passion for data analysis tools and ETL processes. Machine learning and NLP tools are my personal favorites. I thrive on transforming raw data into actionable insights. I am proficient in Python, Java, and other programming languages, and I'm skilled in applying them to develop robust software solutions. As a versatile software engineer, I excel at tackling complex problems and creating efficient, scalable systems. My expertise spans from data wrangling to implementing advanced machine learning models, making me adept at bridging the gap between data and decision-making.</p>
+                    <a href="images/No_number_resume.pdf" download class="btn btn2">Download Resume</a>
                 </div>
-
             </div>
         </div>
         <div id="about">
             <div class="container">
                 <div class="row">
-                    <div class="about-col-1">
-                        <img src="images/work2.png">
+                    <h1 class="sub-title">About Me</h1>
+                    <div class="about-container">
+                        <div class="about-col-2" id="Skills">
+                            <div class="card">
+                                <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                                <h3>Skills</h3>
+                                <ul>
+                                    <li>Frontend Languages: HTML, CSS, JavaScript.</li>
+                                    <li>Databases: SQL.</li>
+                                    <li>Programming Languages: Python, C.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="about-col-2" id="Education">
+                            <div class="card">
+                                <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <h3>Education</h3>
+                                <ul>
+                                    <li>Btech, Computer Science: 2021-2025, Vignan Institute of Information Technology.</li>
+                                    <li>Higher Secondary Education: 2019-2021, Sri Viswa junior college.</li>
+                                    <li>Secondary School: 2015-2019, Sri Chaitanya School.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="about-col-2" id="Volunteering">
+                            <div class="card">
+                                <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                                <h3>Volunteering</h3>
+                                <ul>
+                                    <li>JOINT SECRETARY: Vignan's Student Activity Council.</li>
+                                    <li>JOINT SECRETARY: OWASP VIGNAN.</li>
+                                </ul>
+                            </div>
+                        </div>                        
                     </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <br><P>
-                            Hi,Iam Vyakaranam Sowmya, a undergrad from Artificial intelligence and Data Science branch.<br>
-                            Iam currently working on python programming.<br>
-                            Iam an aspiring Data Scientist which stimulates myself to learn something new in data science feild.<br>
-                            My learning in python is not only confined to data science but also to web development.<br>
-                        </P>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('Education')">Education</p>
-                            <p class="tab-links" onclick="opentab('Volunteering')">Volunteering</p>
-                        </div>
-                        <br>
-                        <div class="tab-contents active-tab" id="Skills">
-                            <ul>
-
-                                <li><span><b>Frontend Languages</b></span><br>HTML,CSS,JavaScript.<br>I did this portfolio using html,css,JS.</li>
-                                <li><span><b>Databases</span></b></span><br>SQL.<br>Learnt MYSQl as part of my Artificial Intelligence and Data Science course.</li>
-                                <li><span><b>Programming Languages</b></span><br>Python,C.<br>Build projects on python programming.</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="Education">
-                            <ul>
-                                <li><span><b>Btech,Computer Science</b></span><br><b>2021-2025</b><br>Vignan Institute of Information Technology,Visakhapatnam,Andhra Pradesh</b></li>
-                                <li><span><b>Higher Secondary Education</span></b></span><br><b>2019-2021</b><br>Sri Viswa junior college,Visakhapatnam,Andhra Pradesh</li>
-                                <li><span><b>Secondary School</b></span><br><b>2015-2019</b><br>Sri Chaitanya School,Visakhapatnam,Andhra Pradesh</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="Volunteering">
-                            <ul>
-                                <li><span><b>JOINT SECRETARY</b></span><br><b>Vignan's Student Activity Council</b><br>I'm Joint Secretary of Student Activity Council of Vignan Institute of Information Technology 
-                                    representing branch AI&DS (Artificial Intelligence And Data Science).Being a student event organiser my work is to organize events  and conduct activities.</li>
-                                <li><span><b>JOINT SECRETARY</b></span><br><b>OWASP VIGNAN</b><br>We organize workshops, events regarding coding, skills development.Along with organizing learning new skills is my favourite part. </li>
-                            </ul>
-                        </div>
+                    <div class="scroll-buttons">
+                        <button onclick="scrollToSection(-1)">&#8678; Previous</button>
+                        <button onclick="scrollToSection(1)">Next &#8680;</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="services">
+        <div id="experience">
+            <h2>EXPERIENCE</h2><br>
+            <div class="experience-container">
+                <!-- Full Stack Developer -->
+                <div class="experience-item">
+                    <div class="experience-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="experience-details">
+                        <h3>Full Stack Developer</h3>
+                        <p><strong>Company Name:</strong> Tech Innovations</p>
+                        <p><strong>Duration:</strong> Jan 2023 - Present</p>
+                        <p>Worked on developing full-stack applications, including front-end and back-end technologies, improving overall user experience and application performance.</p>
+                    </div>
+                </div>
+                <!-- Research Intern -->
+                <div class="experience-item">
+                    <div class="experience-icon"><i class="fas fa-flask"></i></div>
+                    <div class="experience-details">
+                        <h3>Research Intern</h3>
+                        <p><strong>Company Name:</strong> Research Labs</p>
+                        <p><strong>Duration:</strong> Jun 2022 - Dec 2022</p>
+                        <p>Conducted research on machine learning algorithms, participated in data analysis and contributed to publishing research papers.</p>
+                    </div>
+                </div>
+                <!-- Web Scraping Intern -->
+                <div class="experience-item">
+                    <div class="experience-icon"><i class="fas fa-code"></i></div>
+                    <div class="experience-details">
+                        <h3>Web Scraping Intern</h3>
+                        <p><strong>Company Name:</strong> Data Solutions</p>
+                        <p><strong>Duration:</strong> Sep 2021 - May 2022</p>
+                        <p>Developed web scraping tools to collect data from various websites, cleaned and analyzed the data for actionable insights.</p>
+                    </div>
+                </div>
+                <!-- Data Analyst -->
+                <div class="experience-item">
+                    <div class="experience-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="experience-details">
+                        <h3>Data Analyst</h3>
+                        <p><strong>Company Name:</strong> Analytics Corp</p>
+                        <p><strong>Duration:</strong> Jan 2022 - Present</p>
+                        <p>Analyzed data trends, created visualizations, and provided data-driven recommendations to improve business strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>       
+        <div id="timeline">
+            <h1 class="sub-title">Engineering Projects Timeline</h1><br>
+            <div class="timeline-container">
+                <!-- Campus Connect -->
+                <div class="timeline-item" onclick="showDetails('campus-connect')">
+                    <div class="timeline-date">Aug 2023 - Sept 2023</div>
+                    <div class="timeline-content">
+                        <h3>Campus Connect</h3>
+                        <p>Project description here...</p>
+                    </div>
+                </div>
+                <!-- Bob's Esti-mate -->
+                <div class="timeline-item" onclick="showDetails('bobs-estimate')">
+                    <div class="timeline-date">Nov 2023 - Dec 2023</div>
+                    <div class="timeline-content">
+                        <h3>Bob's Esti-mate</h3>
+                        <p>Project description here...</p>
+                    </div>
+                </div>
+                <!-- Feedback Sentimental Analysis -->
+                <div class="timeline-item" onclick="showDetails('feedback-sentimental-analysis')">
+                    <div class="timeline-date">Sep 2023 - Nov 2023</div>
+                    <div class="timeline-content">
+                        <h3>Feedback Sentimental Analysis</h3>
+                        <p>Project description here...</p>
+                    </div>
+                </div>
+                <!-- Grocernator -->
+                <div class="timeline-item" onclick="showDetails('grocernator')">
+                    <div class="timeline-date">Dec 2023 - Jan 2024</div>
+                    <div class="timeline-content">
+                        <h3>Grocerinator</h3>
+                        <p>Project description here...</p>
+                    </div>
+                </div>
+                <!-- Wardrobe Analyser -->
+                <div class="timeline-item" onclick="showDetails('wardrobe-analyser')">
+                    <div class="timeline-date">July 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Wardrobe Analyser</h3>
+                        <p>Project description here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
             <div class="container">
-                <h1 class="sub-title">My Services</h1>
-                <div class="services-list">
-                    <div>
-                        <i class="fa-solid fa-code" style="color: #152238;"></i>
-                        <h2>Web Design</h2>
-                        <p>I created this portfolio website using html,css,JavaScript                      
-                        </p>
-                        <a href="#">Learn more</a>
-
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-paper-plane"></i>vyakaranamsowmya8@gmail.com</p>
+                        <p><i class="fas fa-phone"></i>8520955981</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/sowmya-vyakaranam/"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                            <a href="https://twitter.com/sowmya_vyk?t=INhc01YzXcVyrz5--XfqaQ&s=08"><i class="fab fa-twitter"></i>Twitter</a>
+                            <a href="https://github.com/sowmyavyk"><i class="fab fa-github"></i>GitHub</a>
+                        </div>
+                        <a href="images/No_number_resume.pdf" download class="btn btn2">Download CV</a>
                     </div>
-                    <div>
-                        <i class="fa-brands fa-python" style="color: #152238;"></i>
-                        <h2>Python</h2>
-                        <p>Done basics projects on python<br>
-                            Check out my github profile!!                      
-                        </p>
-                        <a href="#">Learn more</a>
-
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit">Send</button>
+                        </form>
                     </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Vyakaranam Sowmya. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        function opentab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-contents");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-links");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active-link", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active-link";
+        }
 
-                </div>
-            </div>
-        </div>
-<!-- ----------------------------------portfolio-------------------------- -->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1><br>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/home_automation.jpg">
-                <div class="layer">
-                    <h3>Home Automation</h3>
-                    <p>
+        function showDetails(project) {
+            alert("Details for " + project);
+        }
+    </script>
+    <script>
+    function opentab(event, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-contents");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab-links");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active-link", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active-link";
+    }
+</script>  
+    <script>
+        const circle1 = document.getElementById('circle1').getContext('2d');
+const circle2 = document.getElementById('circle2').getContext('2d');
+const circle3 = document.getElementById('circle3').getContext('2d');
+const circle4 = document.getElementById('circle4').getContext('2d');
 
-                    </p>
-                    <a href="#"><i class="fas fa-external-link-alt" style="color:#fff;"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/image_portfolio.png">
-                <div class="layer">
-                    <h3>My Portfolio</h3>
-                    <p>
-                        Made a portfolio website using html,css,js. 
-                    </p>
-                    <a href="#"><i class="fas fa-external-link-alt" style="color:#fff;"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/movie_image.jpg">
-                <div class="layer">
-                    <h3>Choose Your Movie</h3>
-                    <p>Made a movie project using python where you can choose your favourite movies and add them to your list.</p>
-                    <a href="#"><i class="fas fa-external-link-alt" style="color:#fff;"></i></a>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn">See more</a>
-    </div>
-</div>
-<!-- --------------------------contact--------------------------------->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i>vyakaranamsowmya8@gmail.com</p>
-                <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i>0123456789</p><br>
-                <div class="social-icons">
-                    <p><a href="https://www.linkedin.com/in/sowmya-vyakaranam/"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>Linkedin</a></p>
-                    <p><a href="https://twitter.com/sowmya_vyk?t=INhc01YzXcVyrz5--XfqaQ&s=08"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i>Twitter</a></p>
-                    <p><a href="https://github.com/sowmyavyk"><i class="fa-brands fa-github" style="color: #ffffff;"></i>Github</a></p>
-                </div>
-                <a href="images/No_number_resume.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-    <form name="submit-to-google-sheet">
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
-                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn btn2">Submit</button>
-            </form>
-            <span id="msg"></span>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>Copyright @ Sowmya </p>
-    </div>
-</div>
+function createCircleChart(ctx, value) {
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Experience'],
+            datasets: [{
+                data: [value, 100 - value],
+                backgroundColor: ['#efb8d8', '#ddd']
+            }]
+        },
+        options: {
+            cutout: '80%',
+            circumference: 180,
+            rotation: -90,
+            plugins: {
+                legend: { display: false },
+                tooltip: { enabled: false }
+            }
+        }
+    });
+}
+
+createCircleChart(circle1, 75);
+createCircleChart(circle2, 60);
+createCircleChart(circle3, 85);
+createCircleChart(circle4, 50);
+    </script>
 
 <script>
-    var tablinks=document.getElementsByClassName("tab-links");
-    var tabcontents=document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
+    // Text Animation
+    const animatedText = document.querySelector('.animated-text');
+    let phrases = ['DATA AVID', 'SOFTWARE DEVELOPER'];
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let currentText = '';
+    let currentPhrase = '';
+    
+    function type() {
+        if (phraseIndex === phrases.length) {
+            phraseIndex = 0;
         }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
+        currentPhrase = phrases[phraseIndex];
+        currentText = currentPhrase.slice(0, ++letterIndex);
+        animatedText.textContent = currentText;
+
+        if (currentText.length === currentPhrase.length) {
+            setTimeout(() => {
+                phraseIndex++;
+                letterIndex = 0;
+                setTimeout(type, 500); // Wait for 0.5 seconds before starting the next phrase
+            }, 2000); // Wait for 2 seconds before starting the next phrase
+        } else {
+            setTimeout(type, 200); // Typing speed
         }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
     }
+
+    type();
 </script>
 <script>
-    var sidemenu=document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right="0";
-    }
-    function closemenu(){
-        sidemenu.style.right="-200px";
-    }
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzmDFhvQs_48mJCG-_AtHFt5VaehVHAawELBntNUl1kklORfkdrMaxQ105vuw5zbjHN/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg=document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML="message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML=""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+    let currentIndex = 0;
+    const sections = document.querySelectorAll('.about-col-2');
 
-    </body>
+    function scrollToSection(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = sections.length - 1;
+        if (currentIndex >= sections.length) currentIndex = 0;
+        const offset = -currentIndex * 100;
+        sections.forEach(section => {
+            section.style.transform = `translateX(${offset}%)`;
+        });
+    }
+
+    // Auto-scroll function
+    setInterval(() => {
+        scrollToSection(1);
+    }, 5000); // Scrolls every 5 seconds
+</script>
+
+</body>
 </html>
