@@ -12,18 +12,92 @@
         <div class="logo">
             <span class="bracket">{</span><span class="bracket">}</span>
         </div>
-        <h2>coder_os</h2>
+        <h2>Vyakaranam Sowmya</h2>
         <p>// Notion Theme for programmers</p>
         <nav>
             <ul>
-                <li><a href="#ongoing_projects">📂 ongoing_projects</a></li>
-                <li><a href="#directions">📄 directions</a></li>
-                <li><a href="#notes">📝 notes</a></li>
+                <li><a href="#about">📂 About Me</a></li>
+                <li><a href="#projects">📂 Projects</a></li>
+                <li><a href="#experience">📂 Experience</a></li>
+                <li><a href="#ongoing_projects">📂 Ongoing Projects</a></li>
+                <li><a href="#directions">📄 Directions</a></li>
+                <li><a href="#notes">📝 Notes</a></li>
             </ul>
         </nav>
     </div>
     <div class="main-content">
-        <div id="task_bar">
+        <section id="about">
+            <h3>About Me</h3>
+            <p>// A brief introduction about myself</p>
+            <p>I'm a passionate software developer with experience in building dynamic and responsive web applications. My expertise includes frontend and backend technologies, and I have a keen interest in learning new tools and technologies to enhance my skills.</p>
+        </section>
+        <section id="projects">
+            <h3>Projects</h3>
+            <p>// A showcase of my work</p>
+            <div class="flashcard-container">
+                <button class="arrow left-arrow">◄</button>
+                <div class="flashcard-wrapper">
+                    <div class="flashcard">
+                        <img src="images/Wholesale Price Modular Modern Designs Wooden Bedroom Custom Clothes Wardrobe Closet Cabinets With Drawers.jpg" alt="Wardrobe Analysis">
+                        <div class="project-info">
+                            <h4>Wardrobe Analysis</h4>
+                            <p>A recommendation system that suggests clothes based on the user's body type and preferences, and recommends additional accessories.</p>
+                            <span>July 2024 - Present</span>
+                        </div>
+                    </div>
+                    <div class="flashcard">
+                        <img src="images/Asynchronous communication strategies for successful learning design partnerships.jpg" alt="Campus Connect">
+                        <div class="project-info">
+                            <h4>Campus Connect</h4>
+                            <p>A platform to connect students and faculty for better communication and collaboration.</p>
+                            <span>August 2023 - September 2023</span>
+                        </div>
+                    </div>
+                    <div class="flashcard">
+                        <img src="estimate.jpg" alt="Bob's Esti-mate">
+                        <div class="project-info">
+                            <h4>Bob's Esti-mate</h4>
+                            <p>An estimation tool for project managers to calculate the time and resources required for project completion.</p>
+                            <span>November 2023 - December 2023</span>
+                        </div>
+                    </div>
+                    <div class="flashcard">
+                        <img src="feedback.jpg" alt="Feedback Sentimental Analysis">
+                        <div class="project-info">
+                            <h4>Feedback Sentimental Analysis</h4>
+                            <p>A tool to analyze customer feedback and extract sentiments to improve service quality.</p>
+                            <span>September 2023 - November 2023</span>
+                        </div>
+                    </div>
+                    <div class="flashcard">
+                        <img src="grocernator.jpg" alt="Grocerinator">
+                        <div class="project-info">
+                            <h4>Grocerinator</h4>
+                            <p>An application to help users manage their grocery lists and find the best deals.</p>
+                            <span>December 2023 - January 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow right-arrow">►</button>
+            </div>
+        </section>        
+        <section id="experience">
+            <h3>Experience</h3>
+            <p>// My professional journey</p>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <h4>Software Developer at XYZ Company</h4>
+                    <p>Developed and maintained web applications, collaborated with cross-functional teams, and ensured high-quality code delivery.</p>
+                    <span>June 2021 - Present</span>
+                </div>
+                <div class="experience-item">
+                    <h4>Junior Developer at ABC Corporation</h4>
+                    <p>Assisted in the development of web applications, performed testing and debugging, and contributed to project documentation.</p>
+                    <span>January 2020 - May 2021</span>
+                </div>
+            </div>
+        </section>
+        <section id="task_bar">
             <h3>Task Bar</h3>
             <p>// Keep track of your tasks</p>
             <div class="tasks">
@@ -52,8 +126,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div id="events_tracker">
+        </section>
+        <section id="events_tracker">
             <h3>Events Tracker</h3>
             <p>// Keep track of your activities</p>
             <div class="calendar">
@@ -106,6 +180,72 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
+
+    <script>
+        const flashcards = document.querySelectorAll('.flashcard');
+flashcards.forEach((card) => {
+    let isDragging = false;
+    let startPos = 0;
+    let currentTranslate = 0;
+
+    card.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startPos = e.pageX;
+    });
+
+    card.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            const currentPosition = e.pageX;
+            currentTranslate = currentPosition - startPos;
+            card.style.transform = `translateX(${currentTranslate}px)`;
+        }
+    });
+
+    card.addEventListener('mouseup', () => {
+        isDragging = false;
+        card.style.transform = `translateX(0px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        if (isDragging) {
+            card.style.transform = `translateX(0px)`;
+            isDragging = false;
+        }
+    });
+});
+
+    </script>
+    <script>
+        const wrapper = document.querySelector('.flashcard-wrapper');
+const cards = document.querySelectorAll('.flashcard');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+let currentIndex = 1; // Start from the second card
+
+function updateCarousel() {
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    wrapper.style.transform = `translateX(${-cardWidth * (currentIndex - 1)}px)`;
+}
+
+rightArrow.addEventListener('click', () => {
+    if (currentIndex < cards.length) {
+        currentIndex++;
+        updateCarousel();
+    }
+});
+
+leftArrow.addEventListener('click', () => {
+    if (currentIndex > 1) {
+        currentIndex--;
+        updateCarousel();
+    }
+});
+
+// Initialize the position
+updateCarousel();
+
+    </script>
 </body>
 </html>
